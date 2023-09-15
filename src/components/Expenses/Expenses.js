@@ -12,6 +12,10 @@ export default function Expenses(props) {
     console.log("Year selected in Expenses:", year);
   };
 
+  const filteredExpenses = props.items.filter(
+    (expense) => expense.date.getFullYear().toString() === selectedYear
+  );
+
   return (
     <div>
       <Card className="expenses">
@@ -19,7 +23,7 @@ export default function Expenses(props) {
           selected={selectedYear}
           onYearChange={handleYearChange}
         />
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
