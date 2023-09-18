@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./ExpensesFilter.css";
 
@@ -25,9 +25,3 @@ const ExpensesFilter = (props) => {
 };
 
 export default ExpensesFilter;
-
-// listen to changes in state from the dropdown
-// The change in state is then forwarded to the expenses component
-// the year selected is stored in a state in Expenses
-// ExpenseFilter component is added to expenses.
-// nothing needs to be done with the information yet, except to be passed to the expenses.js
